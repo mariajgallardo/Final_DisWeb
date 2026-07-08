@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConsRosell STUDIO | Cerámica e Ilustración</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-contenido">
+            <h1>ConsRosell STUDIO</h1>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="index.html" class="activo">Inicio</a></li>
+                    <li><a href="artista.html">La artista</a></li>
+                    <li><a href="obras.html">Obras</a></li>
+                    <li><a href="talleres.html">Talleres</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <div class="hero fade-in">
+            <img src="img/azulejos.png" alt="Azulejos ilustrados con motivos varios" class="img-full">
+            <article class="mensaje-marca">
+                <h2>Amar al otro desde la artesanía</h2>
+                <p class="text-inicio">
+                    Este es mi estudio experimental de azulejos para interiorismo, regalos y más.<br>
+                    El anhelo es que se convierta en un portal de diálogo entre artesanía y belleza,
+                    entre tradiciones y modernidad.
+                </p>
+            </article>
+        </div>
+
+        <!-- SECCIONES -->
+        <section>
+            <h2 class="titulo-seccion">Bienvenida al estudio</h2>
+            <p>Explorá el trabajo de Constanza Rosell: ceramista e ilustradora apasionada por preservar la
+            tradición del azulejo. Desde su estudio creativo, cada pieza cuenta una historia única.</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 32px;">
+
+                <a href="artista.html" class="caja-taller" style="text-decoration:none; color:inherit;">
+                    <img src="img/constanza.png" alt="La artista" class="img-taller">
+                    <p class="taller">La artista</p>
+                    <p class="desc">Conocé a Constanza, su historia y su visión artística.</p>
+                </a>
+
+                <a href="obras.html" class="caja-taller" style="text-decoration:none; color:inherit;">
+                    <img src="img/azuejos varios.png" alt="Obras" class="img-taller">
+                    <p class="taller">Obras recientes</p>
+                    <p class="desc">Galería con sus últimas creaciones y publicaciones.</p>
+                </a>
+
+                <a href="talleres.html" class="caja-taller" style="text-decoration:none; color:inherit;">
+                    <img src="img/taller1.png" alt="Talleres" class="img-taller">
+                    <p class="taller">Talleres</p>
+                    <p class="desc">Próximas fechas de workshops presenciales.</p>
+                </a>
+
+                <a href="faq.html" class="caja-taller" style="text-decoration:none; color:inherit;">
+                    <img src="img/backsplash.png" alt="FAQ" class="img-taller">
+                    <p class="taller">Preguntas frecuentes</p>
+                    <p class="desc">Respondemos tus dudas sobre pedidos y talleres.</p>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Seguí mi día a día en Instagram:
+            <a href="https://www.instagram.com/ConsRosell_STUDIO/" target="_blank">@consrosell_studio</a>
+        </p>
+        <p>Contacto directo:
+            <a href="mailto:info@consrosell.com">info@consrosell.com</a>
+        </p>
+        <p>&copy; 2024 ConsRosell STUDIO – Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('navMenu');
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('abierto');
+            nav.classList.toggle('abierto');
+        });
+    </script>
+</body>
+</html>

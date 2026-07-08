@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | ConsRosell STUDIO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="header-contenido">
+            <h1>ConsRosell STUDIO</h1>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="artista.html">La artista</a></li>
+                    <li><a href="obras.html">Obras</a></li>
+                    <li><a href="talleres.html">Talleres</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contacto.html" class="activo">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-banner">
+        <h2>Contacto</h2>
+        <p>Pedidos personalizados, consultas sobre talleres o simplemente un saludo.</p>
+    </div>
+
+    <main>
+        <section class="fade-in">
+            <h2 class="titulo-seccion">Enviame tu consulta</h2>
+
+            <form action="enviar.php" method="post" class="form-contacto">
+                <div class="form-grupo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Pedido personalizado / Consulta taller / Otro">
+                </div>
+                <div class="form-grupo">
+                    <label for="mensaje">Consulta</label>
+                    <textarea id="mensaje" name="mensaje" rows="6" placeholder="Contame en qué puedo ayudarte..."></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar consulta</button>
+            </form>
+
+            <div class="contacto-info">
+                <h3 style="margin-bottom:16px; color:var(--color-primario);">También podés encontrarme en:</h3>
+                <p>📧 <a href="mailto:info@consrosell.com">info@consrosell.com</a></p>
+                <p>📸 Instagram: <a href="https://www.instagram.com/ConsRosell_STUDIO/" target="_blank">@consrosell_studio</a></p>
+                <p>📍 Madrid y Granada, España</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Seguí mi día a día en Instagram:
+            <a href="https://www.instagram.com/ConsRosell_STUDIO/" target="_blank">@consrosell_studio</a>
+        </p>
+        <p>Contacto directo: <a href="mailto:info@consrosell.com">info@consrosell.com</a></p>
+        <p>&copy; 2024 ConsRosell STUDIO – Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('navMenu');
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('abierto');
+            nav.classList.toggle('abierto');
+        });
+    </script>
+</body>
+</html>

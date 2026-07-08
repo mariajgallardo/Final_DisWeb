@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Artista | ConsRosell STUDIO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="header-contenido">
+            <h1>ConsRosell STUDIO</h1>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="artista.html" class="activo">La artista</a></li>
+                    <li><a href="obras.html">Obras</a></li>
+                    <li><a href="talleres.html">Talleres</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-banner">
+        <h2>La artista</h2>
+        <p>Ceramista e ilustradora apasionada por la tradición del azulejo.</p>
+    </div>
+
+    <main>
+
+        <!-- BIO PRINCIPAL -->
+        <section class="artista-bio fade-in">
+            <figure class="foto-perfil">
+                <img src="img/constanza.png" alt="Constanza Rosell en su taller de cerámica">
+                <figcaption>Constanza en su estudio, Madrid</figcaption>
+            </figure>
+
+            <div class="artista-texto">
+                <h2 class="titulo-seccion">Constanza Rosell</h2>
+                <p class="artista-ocupacion">Ceramista · Ilustradora · Diseñadora</p>
+                <p class="artista-universidad">Graduada en Diseño — Universidad de Navarra</p>
+
+                <blockquote class="frase-artista">
+                    "Deseo mantener viva la herencia de los azulejos y la ilustración en nuevos formatos,
+                    desde el interiorismo hasta los eventos en vivo."
+                </blockquote>
+
+                <p>Todo lo que crea nace de una pasión profunda por la tradición artesanal.
+                Especializada en la <strong>pintura sobre cubierta y azulejería de autor</strong>,
+                dirige Cons Rosell Studio donde investiga y preserva la técnica ancestral del azulejo
+                a través de su práctica artística.</p>
+
+                <p>Cada proyecto es una oportunidad para contar algo nuevo que perdure en el tiempo
+                y en la memoria de quien lo recibe.</p>
+            </div>
+        </section>
+
+        <div class="separador-azulejo"></div>
+
+        <!-- LO QUE HACE: tarjetas -->
+        <section class="fade-in">
+            <h2 class="titulo-seccion" style="text-align:center; margin-bottom:32px;">¿Qué podés encargarle?</h2>
+
+            <div class="servicios-grid">
+
+                <article class="servicio-card">
+                    <div class="servicio-img-wrap">
+                        <img src="img/azuejos varios.png" alt="Azulejos personalizados">
+                    </div>
+                    <h3>Azulejos personalizados</h3>
+                    <p>Piezas únicas pintadas a mano para regalar o decorar espacios especiales.</p>
+                </article>
+
+                <article class="servicio-card">
+                    <div class="servicio-img-wrap">
+                        <img src="img/backsplash.png" alt="Instalaciones de azulejos">
+                    </div>
+                    <h3>Instalaciones</h3>
+                    <p>Composiciones de azulejos de autor para revestir paredes, cocinas y portales.</p>
+                </article>
+
+                <article class="servicio-card">
+                    <div class="servicio-img-wrap">
+                        <img src="img/taller2.png" alt="Ilustración en vivo">
+                    </div>
+                    <h3>Ilustración en vivo</h3>
+                    <p>Presencia artística en eventos: bodas, exposiciones, lanzamientos y más.</p>
+                </article>
+
+                <article class="servicio-card">
+                    <div class="servicio-img-wrap">
+                        <img src="img/taller1.png" alt="Talleres formativos">
+                    </div>
+                    <h3>Talleres formativos</h3>
+                    <p>Workshops prácticos para aprender la técnica sobrecubierta desde cero.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section style="text-align:center; padding-top: 10px;">
+            <p style="font-size:1.1rem; margin-bottom:20px;">¿Querés hacer un encargo o sumarte a un taller?</p>
+            <a href="contacto.html" class="btn-cta">Escribile a Constanza</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Seguí mi día a día en Instagram:
+            <a href="https://www.instagram.com/ConsRosell_STUDIO/" target="_blank">@consrosell_studio</a>
+        </p>
+        <p>Contacto directo: <a href="mailto:info@consrosell.com">info@consrosell.com</a></p>
+        <p>&copy; 2024 ConsRosell STUDIO – Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('navMenu');
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('abierto');
+            nav.classList.toggle('abierto');
+        });
+    </script>
+</body>
+</html>

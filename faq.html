@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes | ConsRosell STUDIO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="header-contenido">
+            <h1>ConsRosell STUDIO</h1>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="artista.html">La artista</a></li>
+                    <li><a href="obras.html">Obras</a></li>
+                    <li><a href="talleres.html">Talleres</a></li>
+                    <li><a href="faq.html" class="activo">FAQ</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-banner">
+        <h2>Preguntas frecuentes</h2>
+        <p>Todo lo que necesitás saber sobre pedidos, talleres y el proceso creativo.</p>
+    </div>
+
+    <main>
+        <section class="fade-in">
+            <h2 class="titulo-seccion">Tus dudas, respondidas</h2>
+
+            <div class="faq-lista">
+
+                <div class="faq-item">
+                    <button class="faq-pregunta">
+                        ¿Cómo puedo hacer un pedido de azulejos personalizados?
+                        <span class="icono">+</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        Podés escribirme directamente a través del formulario de <a href="contacto.html">contacto</a>
+                        o al mail <a href="mailto:info@consrosell.com">info@consrosell.com</a>. Contame qué tenés en mente —
+                        medidas, diseño, colores y cantidad — y te respondo con un presupuesto en 48 hs.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta">
+                        ¿Cuánto tiempo lleva la producción de un encargo?
+                        <span class="icono">+</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        Los tiempos dependen de la complejidad y la cantidad. Un pedido pequeño (hasta 10 piezas)
+                        suele estar listo en 2 a 3 semanas. Para instalaciones o proyectos de mayor escala,
+                        coordinamos los plazos al inicio para que todo esté perfecto a tiempo.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta">
+                        ¿Los talleres tienen nivel mínimo requerido?
+                        <span class="icono">+</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        ¡Para nada! Todos los talleres están diseñados para personas sin experiencia previa.
+                        Solo necesitás ganas de aprender y disfrutar del proceso. Eso sí, si ya tenés experiencia
+                        en cerámica, también hay talleres de formación más específica.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta">
+                        ¿Se puede hacer un taller privado o grupal para un evento?
+                        <span class="icono">+</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        Sí, absolutamente. Ofrezco talleres privados para cumpleaños, despedidas, team buildings
+                        y cualquier tipo de evento. Las fechas y locaciones son flexibles y se acuerdan con anticipación.
+                        ¡Escribime y lo organizamos juntos!
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta">
+                        ¿Qué materiales se usan en los talleres?
+                        <span class="icono">+</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        Todos los materiales están incluidos: azulejos en blanco, pintura de cerámica de alta calidad,
+                        pinceles y plantillas. No necesitás traer nada, solo tus ganas. Al finalizar, te llevás tu
+                        pieza cocida y lista para usar.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta">
+                        ¿Hacen envíos de pedidos?
+                        <span class="icono">+</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        Sí. Realizamos envíos dentro de España con embalaje especial para cerámica.
+                        Para encargos internacionales, coordinamos el método y costo de envío al confirmar el pedido.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta">
+                        ¿Qué técnica de pintura utiliza Constanza?
+                        <span class="icono">+</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        La técnica principal es la pintura sobrecubierta, una técnica ancestral donde se pinta
+                        directamente sobre el esmalte del azulejo ya cocido. Esto permite una paleta de colores
+                        muy viva y una durabilidad excepcional, ideal tanto para decoración como para uso en cocinas y baños.
+                    </div>
+                </div>
+
+            </div>
+
+            <p style="margin-top: 40px;">
+                ¿No encontraste lo que buscabas?
+                <a href="contacto.html" class="btn-cta" style="margin-left:12px;">Escribime</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Seguí mi día a día en Instagram:
+            <a href="https://www.instagram.com/ConsRosell_STUDIO/" target="_blank">@consrosell_studio</a>
+        </p>
+        <p>Contacto directo: <a href="mailto:info@consrosell.com">info@consrosell.com</a></p>
+        <p>&copy; 2024 ConsRosell STUDIO – Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Hamburguesa
+        const toggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('navMenu');
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('abierto');
+            nav.classList.toggle('abierto');
+        });
+
+        // Acordeón FAQ
+        document.querySelectorAll('.faq-pregunta').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const estaAbierto = item.classList.contains('abierto');
+
+                // Cerrar todos
+                document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('abierto'));
+
+                // Abrir el clickeado (si estaba cerrado)
+                if (!estaAbierto) item.classList.add('abierto');
+            });
+        });
+    </script>
+</body>
+</html>

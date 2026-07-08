@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talleres | ConsRosell STUDIO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="header-contenido">
+            <h1>ConsRosell STUDIO</h1>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="artista.html">La artista</a></li>
+                    <li><a href="obras.html">Obras</a></li>
+                    <li><a href="talleres.html" class="activo">Talleres</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-banner">
+        <h2>Mis próximos talleres</h2>
+        <p>Workshops 100% prácticos — sin experiencia previa necesaria.</p>
+    </div>
+
+    <main>
+        <section class="fade-in">
+            <p class="grid-talleres-intro">
+                Si te llama la atención el mundo del azulejo y te apetece descubrir cómo se pinta de manera
+                tradicional, estos talleres son para vos. Son workshops 100% prácticos, donde pintarás tu propio
+                azulejo desde cero, paso a paso y sin necesidad de tener experiencia previa. La idea es disfrutar
+                del proceso y aprender haciendo.
+            </p>
+
+            <div class="grid-talleres">
+
+                <article class="caja-taller">
+                    <img class="img-taller" src="img/taller1.png" alt="Constanza pintando">
+                    <h3 class="taller">Pintar azulejos – Técnica ancestral</h3>
+                    <p class="horario">Viernes 06/02 | 18 – 20 hs &nbsp;·&nbsp; Madrid</p>
+                    <p class="desc">Técnica sobrecubierta para principiantes y nociones básicas para empezar.</p>
+                    <a href="contacto.html" class="btn-cta" style="margin-top:16px;display:inline-block;">Reservar lugar</a>
+                </article>
+
+                <article class="caja-taller">
+                    <img class="img-taller" src="img/taller2.png" alt="Taller Azulejos del mundo en vivo">
+                    <h3 class="taller">Azulejos del mundo – Los tantos estilos</h3>
+                    <p class="horario">Sábado 07/02 | 11 – 13 hs &nbsp;·&nbsp; Madrid</p>
+                    <p class="desc">Taller de formación y práctica sobre un estilo de preferencia que te haya cautivado.</p>
+                    <a href="contacto.html" class="btn-cta" style="margin-top:16px;display:inline-block;">Reservar lugar</a>
+                </article>
+
+                <article class="caja-taller">
+                    <img class="img-taller" src="img/taller3.png" alt="Emblema de la familia Hernández Alonso">
+                    <h3 class="taller">Diseña y pinta tu emblema familiar</h3>
+                    <p class="horario">Viernes 17/04 | 18 – 20 hs &nbsp;·&nbsp; Granada</p>
+                    <p class="desc">Crearás tu propio mosaico para adornar el portal de tu hogar con un toque único.</p>
+                    <a href="contacto.html" class="btn-cta" style="margin-top:16px;display:inline-block;">Reservar lugar</a>
+                </article>
+
+                <article class="caja-taller">
+                    <img class="img-taller" src="img/taller4.png" alt="Muestras de color sobre azulejos">
+                    <h3 class="taller">El atlas del azulejo – Formativo</h3>
+                    <p class="horario">Sábado 18/02 | 10 – 12 hs &nbsp;·&nbsp; Granada</p>
+                    <p class="desc">Un sábado para aprender más sobre la increíble historia de los azulejos.</p>
+                    <a href="contacto.html" class="btn-cta" style="margin-top:16px;display:inline-block;">Reservar lugar</a>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Seguí mi día a día en Instagram:
+            <a href="https://www.instagram.com/ConsRosell_STUDIO/" target="_blank">@consrosell_studio</a>
+        </p>
+        <p>Contacto directo: <a href="mailto:info@consrosell.com">info@consrosell.com</a></p>
+        <p>&copy; 2024 ConsRosell STUDIO – Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('navMenu');
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('abierto');
+            nav.classList.toggle('abierto');
+        });
+    </script>
+</body>
+</html>

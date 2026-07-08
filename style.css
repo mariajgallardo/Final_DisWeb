@@ -1,0 +1,728 @@
+/* VARIABLES CSS */
+:root {
+    --color-primario: #3c659e;
+    --color-acento: #e4bf5a;
+    --color-fondo: #f0f0ef;
+    --color-texto: #333;
+    --color-blanco: #fff;
+    --fuente-principal: Arial, sans-serif;
+    --fuente-titulo: 'Times New Roman', Times, serif;
+    --transicion: 0.3s ease;
+    --sombra: 0 2px 8px rgba(0,0,0,0.12);
+    --borde-radio: 4px;
+}
+
+/* RESET GENERAL */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+ul { list-style: none; }
+
+/* TIPOGRAFÍA */
+h1 {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+}
+h2 {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+h3 {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    line-height: 1.2;
+}
+
+/* HEADER & NAV */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    padding: 15px 5%;
+    box-shadow: var(--sombra);
+}
+
+.header-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Nav links */
+nav ul {
+    display: flex;
+    gap: 8px;
+}
+
+nav a {
+    color: var(--color-fondo);
+    font-weight: bold;
+    font-size: 0.9em;
+    padding: 6px 10px;
+    border-radius: var(--borde-radio);
+    transition: color var(--transicion), background-color var(--transicion);
+}
+
+nav a:hover,
+nav a.activo {
+    color: var(--color-acento);
+    background-color: rgba(255,255,255,0.08);
+}
+
+/* Botón hamburguesa (oculto en desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background-color: var(--color-fondo);
+    border-radius: 2px;
+    transition: transform var(--transicion), opacity var(--transicion);
+}
+
+/* Animación hamburguesa → X */
+.menu-toggle.abierto span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.menu-toggle.abierto span:nth-child(2) { opacity: 0; }
+.menu-toggle.abierto span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+
+/* HERO / INICIO */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: #000;
+    overflow: hidden;
+}
+
+.hero .img-full {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.mensaje-marca {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--color-fondo);
+    width: 90%;
+}
+
+.mensaje-marca h2 {
+    color: var(--color-acento);
+    margin-bottom: 12px;
+    font-size: clamp(1.4rem, 4vw, 2.5rem);
+}
+
+.text-inicio { line-height: 1.5; font-size: clamp(0.9rem, 1.8vw, 1.1rem); }
+
+
+/* SECCIÓN GENERAL */
+section, .seccion {
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titulo-seccion {
+    color: var(--color-primario);
+    margin-bottom: 30px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 0 5%;
+}
+
+
+/* ARTISTA */
+.bloque-artista {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.foto-perfil img {
+    width: 320px;
+    border: 1px solid #ddd;
+    border-radius: var(--borde-radio);
+    box-shadow: var(--sombra);
+}
+
+.info-artista { flex: 1; }
+
+.info-artista p { margin-bottom: 14px; }
+
+#puedo { padding-left: 20px; list-style: disc; }
+
+.btn-cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    border-radius: var(--borde-radio);
+    font-weight: bold;
+    transition: background-color var(--transicion), transform var(--transicion);
+}
+
+.btn-cta:hover {
+    background-color: var(--color-acento);
+    color: var(--color-texto);
+    transform: translateY(-2px);
+}
+
+
+/* OBRAS / GALERÍA INSTAGRAM */
+.galeria-instagram {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.post { width: 100%; }
+
+
+/* TALLERES */
+.grid-talleres-intro {
+    margin-bottom: 24px;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.grid-talleres {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.caja-taller {
+    padding: 20px;
+    border: 2px solid var(--color-primario);
+    background: var(--color-blanco);
+    border-radius: var(--borde-radio);
+    box-shadow: var(--sombra);
+    transition: transform var(--transicion), border-color var(--transicion), box-shadow var(--transicion);
+}
+
+.caja-taller:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-acento);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.img-taller {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: var(--borde-radio);
+    margin-bottom: 12px;
+}
+
+.taller {
+    font-family: var(--fuente-titulo);
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--color-primario);
+    margin-bottom: 8px;
+}
+
+.horario {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.desc { font-size: 0.9rem; }
+
+
+/* FAQ */
+.faq-lista { display: flex; flex-direction: column; gap: 16px; }
+
+.faq-item {
+    border: 1px solid #ddd;
+    border-radius: var(--borde-radio);
+    background: var(--color-blanco);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+.faq-pregunta {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 18px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-primario);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--fuente-principal);
+    transition: background-color var(--transicion);
+}
+
+.faq-pregunta:hover { background-color: #f5f5f5; }
+
+.faq-pregunta .icono {
+    font-size: 1.4rem;
+    font-weight: 300;
+    transition: transform var(--transicion);
+    flex-shrink: 0;
+    margin-left: 12px;
+}
+
+.faq-item.abierto .faq-pregunta .icono { transform: rotate(45deg); }
+
+.faq-respuesta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding var(--transicion);
+    padding: 0 20px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.faq-item.abierto .faq-respuesta {
+    max-height: 300px;
+    padding: 16px 20px;
+}
+
+
+/* FORMULARIO DE CONTACTO */
+.form-contacto { max-width: 640px; }
+
+.form-grupo { margin-bottom: 20px; }
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.form-grupo input,
+.form-grupo textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: var(--borde-radio);
+    font-family: var(--fuente-principal);
+    font-size: 0.95rem;
+    transition: border-color var(--transicion), box-shadow var(--transicion);
+}
+
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px rgba(60,101,158,0.15);
+}
+
+.form-grupo textarea { resize: vertical; min-height: 120px; }
+
+.btn-enviar {
+    padding: 12px 28px;
+    background-color: var(--color-acento);
+    color: var(--color-texto);
+    border: none;
+    border-radius: var(--borde-radio);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color var(--transicion), transform var(--transicion);
+}
+
+.btn-enviar:hover {
+    background-color: #c9a23e;
+    transform: translateY(-2px);
+}
+
+.contacto-info { margin-top: 40px; }
+.contacto-info p { margin-bottom: 10px; }
+.contacto-info a { color: var(--color-primario); font-weight: bold; }
+.contacto-info a:hover { color: var(--color-acento); }
+
+
+/* FOOTER */
+footer {
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    padding: 40px 5%;
+    margin-top: 60px;
+    text-align: center;
+}
+
+footer p { margin-bottom: 8px; font-size: 0.85rem; opacity: 0.85; }
+
+footer a { color: var(--color-acento); }
+footer a:hover { text-decoration: underline; }
+
+
+/* PÁGINA INTERNA: BANNER SUPERIOR */
+.page-banner {
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.page-banner h2 { color: var(--color-acento); }
+.page-banner p { margin-top: 10px; opacity: 0.85; }
+
+
+/* ANIMACIONES SUTILES */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in { animation: fadeInUp 0.6s ease both; }
+
+
+/* MEDIA QUERIES */
+
+/* TABLET: 481px – 1024px */
+@media (max-width: 1024px) {
+
+    /* Nav */
+    .menu-toggle { display: flex; }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-primario);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    nav.abierto { max-height: 400px; }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+    }
+
+    nav a {
+        display: block;
+        padding: 12px 5%;
+        font-size: 1rem;
+        border-radius: 0;
+    }
+
+    /* Artista */
+    .bloque-artista {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .foto-perfil img { width: 260px; }
+
+    /* Grids 2 columnas */
+    .grid-talleres { grid-template-columns: repeat(2, 1fr); }
+    .galeria-instagram { grid-template-columns: repeat(2, 1fr); }
+
+    /* Hero */
+    .hero { height: 380px; }
+}
+
+/* MOBILE: hasta 480px */
+@media (max-width: 480px) {
+
+    header { padding: 12px 4%; }
+
+    h1 { font-size: 1.1rem; }
+
+    /* Hero */
+    .hero { height: 280px; }
+    .mensaje-marca h2 { font-size: 1.3rem; }
+    .text-inicio { font-size: 0.85rem; }
+
+    /* Artista */
+    .foto-perfil img { width: 100%; max-width: 300px; }
+
+    /* 1 columna en grids */
+    .grid-talleres { grid-template-columns: 1fr; }
+    .galeria-instagram { grid-template-columns: 1fr; }
+
+    /* Formulario */
+    .form-grupo input,
+    .form-grupo textarea { padding: 10px 12px; }
+
+    section, .seccion { padding: 40px 4%; }
+
+    .page-banner { padding: 36px 4%; }
+}
+
+
+/* Borde decorativo global */
+body::before {
+    content: '';
+    display: block;
+    height: 6px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--color-primario) 0px,
+        var(--color-primario) 18px,
+        var(--color-acento)   18px,
+        var(--color-acento)   22px
+    );
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+}
+
+header { top: 6px; }
+
+/* Separador decorativo estilo azulejo */
+.separador-azulejo {
+    height: 3px;
+    margin: 0 5%;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--color-primario) 0px,
+        var(--color-primario) 14px,
+        var(--color-acento)   14px,
+        var(--color-acento)   17px
+    );
+    opacity: 0.45;
+}
+
+/* Fondo de sección con textura */
+section:nth-child(even) {
+    background-color: rgba(60,101,158,0.04);
+    border-radius: 6px;
+}
+
+/* Borde azulejo en cards de taller */
+.caja-taller {
+    border-top: 4px solid var(--color-primario);
+}
+.caja-taller:hover {
+    border-top-color: var(--color-acento);
+}
+
+/* Footer con borde top decorativo */
+footer {
+    border-top: 4px solid var(--color-acento);
+}
+
+
+/* ARTISTA */
+.artista-bio {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+    padding-bottom: 48px;
+}
+
+.artista-bio .foto-perfil {
+    flex-shrink: 0;
+}
+
+.artista-bio .foto-perfil img {
+    width: 300px;
+    border-radius: 4px;
+    box-shadow: var(--sombra);
+    /* borde estilo azulejo en la foto */
+    border: 3px solid var(--color-primario);
+    outline: 6px solid var(--color-fondo);
+    outline-offset: -9px;
+}
+
+.artista-bio .foto-perfil figcaption {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 8px;
+}
+
+.artista-texto { flex: 1; }
+
+.artista-ocupacion {
+    font-size: 0.95rem;
+    color: var(--color-primario);
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    margin-bottom: 2px !important;
+}
+
+.artista-universidad {
+    font-size: 0.88rem;
+    color: #777;
+    margin-bottom: 20px !important;
+    font-style: italic;
+}
+
+.frase-artista {
+    border-left: 4px solid var(--color-acento);
+    padding: 14px 20px;
+    margin: 20px 0;
+    background: rgba(228,191,90,0.08);
+    border-radius: 0 4px 4px 0;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Servicios grid (artista) */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.servicio-card {
+    background: var(--color-blanco);
+    border: 1px solid #ddd;
+    border-top: 3px solid var(--color-primario);
+    border-radius: var(--borde-radio);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.servicio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.13);
+    border-top-color: var(--color-acento);
+}
+
+.servicio-img-wrap {
+    height: 150px;
+    overflow: hidden;
+}
+
+.servicio-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.servicio-card:hover .servicio-img-wrap img {
+    transform: scale(1.05);
+}
+
+.servicio-card h3 {
+    font-size: 1rem;
+    color: var(--color-primario);
+    padding: 14px 16px 6px;
+}
+
+.servicio-card p {
+    font-size: 0.88rem;
+    padding: 0 16px 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Galería de proceso / taller */
+.galeria-proceso {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.galeria-proceso img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--borde-radio);
+    box-shadow: var(--sombra);
+    transition: transform var(--transicion), box-shadow var(--transicion);
+    border: 2px solid transparent;
+}
+
+.galeria-proceso img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    border-color: var(--color-acento);
+}
+
+
+/* OBRAS */
+.galeria-instagram {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.post {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.post blockquote.instagram-media {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    width: 100% !important;
+}
+
+
+/* RESPONSIVE ADICIONAL para las nuevas secciones */
+@media (max-width: 1024px) {
+    .artista-bio { flex-direction: column; align-items: center; }
+    .artista-bio .foto-perfil img { width: 240px; }
+    .servicios-grid { grid-template-columns: repeat(2, 1fr); }
+    .galeria-proceso { grid-template-columns: repeat(2, 1fr); }
+    .galeria-instagram { grid-template-columns: repeat(2, 1fr); width: 100%; }
+}
+
+@media (max-width: 480px) {
+    .artista-bio .foto-perfil img { width: 100%; max-width: 280px; }
+    .servicios-grid { grid-template-columns: 1fr; }
+    .galeria-proceso { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .galeria-proceso img { height: 130px; }
+    .galeria-instagram { grid-template-columns: 1fr; width: 100%; }
+}
